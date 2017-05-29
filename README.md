@@ -1,4 +1,6 @@
 [![Build Status][travis-image]][travis-url]
+[![Dependency Status][david-dep-image]][david-dep-url]
+[![DevDependencies Status][david-devdep-image]][david-devdep-url]
 [![Github Tag][github-tag-image]][github-tag-url]
 [![License][license-image]][license-url]
 
