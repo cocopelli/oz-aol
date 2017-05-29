@@ -1,4 +1,5 @@
 [![Build Status][travis-image]][travis-url]
+[![Github Tag][github-tag-image]][github-tag-url]
 [![License][license-image]][license-url]
 
 # AOL
@@ -41,3 +42,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [license-image]: https://img.shields.io/github/license/cocopelli/oz-aol.svg
 [license-url]: https://github.com/cocopelli/oz-aol/blob/master/LICENSE
+
+[github-tag-image]: https://img.shields.io/github/tag/cocopelli/oz-aol.svg
+[github-tag-url]: https://github.com/cocopelli/oz-aol
