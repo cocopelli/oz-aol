@@ -1,6 +1,4 @@
 [![Build Status][travis-image]][travis-url]
-[![dependencies Status][david-dep-image]][david-dep-url]
-[![devDependencies Status][david-devdep-image]][david-devdep-url]
 [![License][license-image]][license-url]
 
 # AOL
