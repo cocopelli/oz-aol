@@ -35,8 +35,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [travis-image]: https://travis-ci.org/cocopelli/oz-aol.svg?branch=master
 [travis-url]: https://travis-ci.org/cocopelli/oz-aol
 
-[david-deb-image]: https://david-dm.org/cocopelli/oz-aol/status.svg
-[david-deb-url]: https://david-dm.org/cocopelli/oz-aol
+[david-dep-image]: https://david-dm.org/cocopelli/oz-aol/status.svg
+[david-dep-url]: https://david-dm.org/cocopelli/oz-aol
 
 [david-devdep-image]: https://david-dm.org/cocopelli/oz-aol/dev-status.svg
 [david-devdep-url]: https://david-dm.org/cocopelli/oz-aol?type=dev
