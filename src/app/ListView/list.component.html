@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="list-ansicht">
+    <h1>Song-List Ansicht</h1>
+
+    <p>Liste von allen Songs</p>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Titel</th>
+          <th>Dauer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let song of songs">
+          <td class="col-md-10">
+            <a [routerLink]="['/song']">{{song.title}}</a>
+          </td>
+          <td class="col-md-2">{{song.duration}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>

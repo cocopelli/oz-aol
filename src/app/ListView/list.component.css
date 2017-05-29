@@ -1,0 +1,31 @@
+.list-ansicht {
+  /*background-image: url("../img/andOne02.jpg");*/
+  background-size: cover;
+  color: #000;
+  /*min-height: 1193px;*/
+  margin-top: 0;
+}
+
+.container {
+  /*background-color: black;*/
+  width: 80%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #fe00b0;
+}
+
+.table a {
+  display: block;
+  text-decoration: none;
+}
