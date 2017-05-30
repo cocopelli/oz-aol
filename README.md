@@ -2,6 +2,7 @@
 [![Dependency Status][david-dep-image]][david-dep-url]
 [![DevDependencies Status][david-devdep-image]][david-devdep-url]
 [![Github Tag][github-tag-image]][github-tag-url]
+[![Coverage Status][code-coverage-image]][code-coverage-url]
 [![License][license-image]][license-url]
 
 # AOL
@@ -42,8 +43,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [david-devdep-image]: https://david-dm.org/cocopelli/oz-aol/dev-status.svg
 [david-devdep-url]: https://david-dm.org/cocopelli/oz-aol?type=dev
 
+[github-tag-image]: https://img.shields.io/github/tag/cocopelli/oz-aol.svg
+[github-tag-url]: https://github.com/cocopelli/oz-aol
+
+[code-coverage-image]: https://coveralls.io/repos/github/cocopelli/oz-aol/badge.svg?branch=master
+[code-coverage-url]: https://coveralls.io/github/cocopelli/oz-aol?branch=master
+
 [license-image]: https://img.shields.io/github/license/cocopelli/oz-aol.svg
 [license-url]: https://github.com/cocopelli/oz-aol/blob/master/LICENSE
 
-[github-tag-image]: https://img.shields.io/github/tag/cocopelli/oz-aol.svg
-[github-tag-url]: https://github.com/cocopelli/oz-aol
+
