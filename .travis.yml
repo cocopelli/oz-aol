@@ -5,6 +5,4 @@ node_js:
 notifications:
   slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
 
-script: "sbt clean coverage test"
-
-after_success: "sbt coveralls"
+after_success: coveralls
