@@ -5,5 +5,4 @@ node_js:
 notifications:
   slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
 
-after_success:
-  - coveralls
+after_success: "sbt coveralls"
