@@ -1,8 +1,9 @@
 language: node_js
 node_js:
-- '7'
-- '6'
+  - '7'
+  - '6'
 notifications:
   slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
 
-after_success: coveralls
+after_success:
+  - coveralls
