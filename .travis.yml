@@ -5,4 +5,5 @@ node_js:
 notifications:
   slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
 
-after_success: "sbt coveralls"
+after_success:
+  - 'cat ./coverage/lcov.info | ./node_modules/.bin/coveralls'
