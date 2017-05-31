@@ -1,6 +1,10 @@
 language: node_js
 node_js:
-  - '7'
-  - '6'
+- '7'
+- '6'
 notifications:
-    slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
+  slack: cocopelli:6JlTKnvCxaLohTdDMGfu5urE
+env:
+  matrix:
+  - repo_token: repo_token
+  - secure: qAipWH5r9a2PddPh7BVvprcUlhThkjfpWo8OqnL2/kr6ShkTvMeTdamzha47gZmTKrlH4meE5LBkWaVfQ7B6DRwLdKNmw8CDKenpIOqT41HmwAFCbXR9FopZlekrFc8vO0ansP1jgRPoVvZOhgyV0W5OdsicXR0DVN0BeLs+umcPQAPZkz/4hEt7OPAwlCgVZaevW5gYnFG1DphALlpELxKUIZTWdxZcJBqBUdLZjpm90bttTIRaAUOau2FhGy9YvLWSfMe40P7sVv113Gdt6C8DIFSTSHDRoOhryzfND2y3WAx7ilxMyzWyYBb5m0XPDw7dlIMSe2PYOndMP8VpOyFRy7YjevnwNGyN+IhsrXAoLRg6n1rZ2qNaqarr1+Hmt6aqH1gA6HoSljWJTN+37ryQKGtg0u9oosX832d2D7zZ7/GtNVSpJCEgs678aejIX9cC8Kf/QYlmYIyl4vBevnkyHmYv1FI5oFtRmluajjIcqRHXXL2Lr4Yukgn1rfPC+0k1vueo6C/PPi93JlVYyRSjOApakTOq1nO98fFHHoQ68XkFQJ6ODDDkPxqmYgxDuJGollw381UpWQ4v5bTX0fMYab3kc2FHbVdYKn91y8oBZUkgEEfB7Xm3nc2sT2WRaCVkjw3D6kPATnc9SXnn7WrQ4l/Q1USd+n/G0A7cuKM=
