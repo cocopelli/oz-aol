@@ -1,14 +1,14 @@
 import {AOLPage} from './app.po';
 
-describe('aol App', () => {
+describe('AND ONE Lyrics App', () => {
   let page: AOLPage;
 
   beforeEach(() => {
     page = new AOLPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying "A O L"', async () => {
     page.navigateTo();
-    expect<any>(page.getParagraphText()).toEqual('A O L');
+    expect<any>(await page.getParagraphText()).toEqual('A O L');
   });
 });

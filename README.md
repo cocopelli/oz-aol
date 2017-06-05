@@ -1,11 +1,13 @@
+[![Github Tag][github-tag-image]][github-tag-url]
 [![Build Status][travis-image]][travis-url]
+[![Coverage Status][code-coverage-image]][code-coverage-url]
 [![Dependency Status][david-dep-image]][david-dep-url]
 [![DevDependencies Status][david-devdep-image]][david-devdep-url]
-[![Github Tag][github-tag-image]][github-tag-url]
-[![Coverage Status][code-coverage-image]][code-coverage-url]
 [![License][license-image]][license-url]
 
-# AOL
+***
+
+# And One Lyrics
 
 This is a Angular4 project
 
@@ -34,22 +36,24 @@ Before running the tests make sure you are serving the app via `npm run install`
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-[travis-image]: https://travis-ci.org/cocopelli/oz-aol.svg?branch=master
-[travis-url]: https://travis-ci.org/cocopelli/oz-aol
+***
 
-[david-dep-image]: https://david-dm.org/cocopelli/oz-aol/status.svg
-[david-dep-url]: https://david-dm.org/cocopelli/oz-aol
-
-[david-devdep-image]: https://david-dm.org/cocopelli/oz-aol/dev-status.svg
-[david-devdep-url]: https://david-dm.org/cocopelli/oz-aol?type=dev
-
-[github-tag-image]: https://img.shields.io/github/tag/cocopelli/oz-aol.svg
+[github-tag-image]: https://img.shields.io/github/tag/cocopelli/oz-aol.svg?style=flat-square
 [github-tag-url]: https://github.com/cocopelli/oz-aol
 
-[code-coverage-image]: https://coveralls.io/repos/github/cocopelli/oz-aol/badge.svg?branch=master
+[travis-image]: https://img.shields.io/travis/cocopelli/oz-aol.svg?style=flat-square
+[travis-url]: https://travis-ci.org/cocopelli/oz-aol
+
+[code-coverage-image]: https://img.shields.io/coveralls/cocopelli/oz-aol/master.svg?style=flat-square
 [code-coverage-url]: https://coveralls.io/github/cocopelli/oz-aol?branch=master
 
-[license-image]: https://img.shields.io/github/license/cocopelli/oz-aol.svg
+[david-dep-image]: https://img.shields.io/david/cocopelli/oz-aol.svg?style=flat-square
+[david-dep-url]: https://david-dm.org/cocopelli/oz-aol
+
+[david-devdep-image]: https://img.shields.io/david/dev/cocopelli/oz-aol.svg?style=flat-square
+[david-devdep-url]: https://david-dm.org/cocopelli/oz-aol?type=dev
+
+[license-image]: https://img.shields.io/github/license/cocopelli/oz-aol.svg?style=flat-square
 [license-url]: https://github.com/cocopelli/oz-aol/blob/master/LICENSE
 
 
