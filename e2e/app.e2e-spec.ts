@@ -1,4 +1,4 @@
-import { AOLPage } from './app.po';
+import {AOLPage} from './app.po';
 
 describe('aol App', () => {
   let page: AOLPage;
@@ -9,6 +9,6 @@ describe('aol App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect<any>(page.getParagraphText()).toEqual('Song-List Ansicht');
+    expect<any>(page.getParagraphText()).toEqual('A O L');
   });
 });

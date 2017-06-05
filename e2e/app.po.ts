@@ -1,4 +1,4 @@
-import { browser, element, by } from 'protractor';
+import {browser, element, by} from 'protractor';
 
 export class AOLPage {
   navigateTo() {
@@ -6,6 +6,6 @@ export class AOLPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root div')).getText();
   }
 }
