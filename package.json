@@ -18,7 +18,8 @@
     "pretest": "ng lint",
     "test": "ng test --single-run --code-coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ci": "npm run test && npm run e2e"
   },
   "dependencies": {
     "@angular/common": "^4.1.3",
