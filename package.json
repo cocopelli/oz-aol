@@ -11,6 +11,11 @@
     "url": "https://github.com/cocopelli/oz-aol/issues"
   },
   "homepage": "https://github.com/cocopelli/oz-aol#readme",
+  "engines": {
+    "node": ">=6.9.5",
+    "npm": ">=3.10.7",
+    "yarn": ">=0.21.3"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
