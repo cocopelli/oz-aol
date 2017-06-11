@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {SongItem} from '../model/songItem';
+import {SongItem} from '../Model/songItem';
 
 
 @Component({

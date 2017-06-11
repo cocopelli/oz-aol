@@ -9,9 +9,7 @@ describe('ListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ListComponent],
-      imports: [
-        RouterTestingModule
-      ]
+      imports: [RouterTestingModule]
     })
       .compileComponents();
   }));
