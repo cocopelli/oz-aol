@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 
 // Makes this class injectable as a service to another class
 @Injectable()
-export class SonItemService {
+export class SongItemService {
 
   // Base Url
   private baseUrl = 'http://#/v1/songs';
