@@ -181,7 +181,7 @@ describe('SongItemService', () => {
             ));
         });
 
-      songitemService.addSong(99).subscribe(
+      songitemService.addSong(42).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
@@ -223,7 +223,7 @@ describe('SongItemService', () => {
             ));
         });
 
-      songItemService.updateSongById(88).subscribe(
+      songItemService.updateSongById(23).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
@@ -234,7 +234,7 @@ describe('SongItemService', () => {
       )
     })));
 
-  it('should delete an existing blog entry',
+  it('should delete an existing songItem',
     async(inject([SongItemService], (songItemService) => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
@@ -248,7 +248,7 @@ describe('SongItemService', () => {
         });
     })));
 
-  it('should give a delete song exaption',
+  it('should give a delete song excaption',
     async(inject([SongItemService], (songItemService) => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
@@ -263,7 +263,7 @@ describe('SongItemService', () => {
             ));
         });
 
-      songItemService.deleteSongById(88).subscribe(
+      songItemService.deleteSongById(42).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
