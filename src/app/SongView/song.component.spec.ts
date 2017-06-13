@@ -9,9 +9,7 @@ describe('SongComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SongComponent],
-      imports: [
-        RouterTestingModule
-      ]
+      imports: [RouterTestingModule]
     })
       .compileComponents();
   }));
