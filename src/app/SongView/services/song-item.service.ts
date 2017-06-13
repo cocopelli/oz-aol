@@ -57,7 +57,6 @@ export class SongItemService {
   deleteSongById(id: number): Observable<SongItem[]> {
 
     return this.http.delete(`${this.baseUrl}/${id}`, this.getHeader())
-      .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'delete a songItem request server error'));
   }
 
