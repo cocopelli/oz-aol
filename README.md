@@ -36,7 +36,7 @@ Before running the tests make sure you are serving the app via `npm run install`
 
 ## Running continuous integration
 
-Run `npm run ci` to execute the unit and the ent-to-end tests
+Run `npm run ci` to execute the unit and the end-to-end tests
 
 ## Further help
 
