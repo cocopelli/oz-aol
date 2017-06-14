@@ -151,22 +151,23 @@ describe('BackendService', () => {
       )
     })));
 
-  // it('should insert new songItem',
-  //   async(inject([BackendService], (backendService) => {
-  //     mockBackend.connections.subscribe(
-  //       (connection: MockConnection) => {
-  //
-  //         expect(connection.request.method).toBe(RequestMethod.Post);
-  //         connection.mockRespond(new Response(new ResponseOptions({status: 201})));
-  //       });
-  //
-  //     const data: SongItem = new SongItem('PimmelMann 2', 'Hyper Hyper Pimmel', 150);
-  //     backendService.addSong(data).subscribe(
-  //       (successResult) => {
-  //         expect(successResult).toBeDefined();
-  //         // expect(successResult.status).toBe(201);
-  //       });
-  //   })));
+  it('should insert new songItem',
+    async(inject([BackendService], (backendService) => {
+      mockBackend.connections.subscribe(
+        (connection: MockConnection) => {
+
+          expect(connection.request.url).toMatch(/\/setlists/);
+          expect(connection.request.method).toBe(RequestMethod.Post);
+          connection.mockRespond(new Response(new ResponseOptions({status: 201})));
+        });
+
+      const data = { title: 'test title', content: 'foobar'};
+      backendService.addItem('setlists', data).subscribe(
+        (successResult) => {
+          expect(successResult).toBeDefined();
+          // expect(successResult.status).toBe(201);
+        });
+    })));
 
   it('should give a add new item exeption',
     async(inject([BackendService], (backendService) => {
@@ -193,22 +194,24 @@ describe('BackendService', () => {
         })
     })));
 
-  // it('should save updates to an existing songItem',
-  //   async(inject([BackendService], (backendService) => {
-  //     mockBackend.connections.subscribe(
-  //       (connection: MockConnection) => {
-  //         // is it the correct REST type for an update? (PUT)
-  //         expect(connection.request.method).toBe(RequestMethod.Put);
-  //         connection.mockRespond(new Response(new ResponseOptions({status: 204})));
-  //       });
-  //
-  //     const data: SongItem = new SongItem('Discomat', 'ich fühl mich Disko Disko', 200);
-  //     backendService.updateSongById(data).subscribe(
-  //       (successResult) => {
-  //         expect(successResult).toBeDefined();
-  //         // expect(successResult.status).toBe(204);
-  //       });
-  //   })));
+  it('should update to an existing item',
+    async(inject([BackendService], (backendService) => {
+      mockBackend.connections.subscribe(
+        (connection: MockConnection) => {
+
+          expect(connection.request.url).toMatch(/\/lyrics\/6/);
+          // is it the correct REST type for an update? (PUT)
+          expect(connection.request.method).toBe(RequestMethod.Put);
+          connection.mockRespond(new Response(new ResponseOptions({status: 204})));
+        });
+
+      const data = { tiitle: 'Jon Doe', content: 'lot of bla bla'};
+      backendService.updateItemById('lyrics', 6543, data).subscribe(
+        (successResult) => {
+          expect(successResult).toBeDefined();
+          // expect(successResult.status).toBe(204);
+        });
+    })));
 
   it('should give a save updates exeption',
     async(inject([BackendService], (backendService) => {
