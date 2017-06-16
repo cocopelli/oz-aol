@@ -48,7 +48,8 @@ describe('BackendService', () => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
 
-          // expect(connection.request.url).toMatch(/\/songs/);
+          expect(connection.request.url).toMatch(/\/songs/);
+          expect(connection.request.method).toBe(RequestMethod.Get);
 
           connection.mockRespond(new Response(
             new ResponseOptions({
@@ -70,7 +71,7 @@ describe('BackendService', () => {
             )));
         });
 
-      backendService.getItems().subscribe(
+      backendService.getItems('songs').subscribe(
         (successResult) => {
           expect(successResult.length).toBe(2);
         });
@@ -80,6 +81,9 @@ describe('BackendService', () => {
     async(inject([BackendService], (backendService) => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
+
+          expect(connection.request.url).toMatch(/\/setlists/);
+          expect(connection.request.method).toBe(RequestMethod.Get);
 
           connection.mockError(
             new MockError(
@@ -91,7 +95,7 @@ describe('BackendService', () => {
             ));
         });
 
-      backendService.getItems().subscribe(
+      backendService.getItems('setlists').subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
@@ -107,6 +111,7 @@ describe('BackendService', () => {
         (connection: MockConnection) => {
 
           expect(connection.request.url).toMatch(/\/songs\/3/);
+          expect(connection.request.method).toBe(RequestMethod.Get);
 
           connection.mockRespond(
             new Response(
@@ -130,6 +135,9 @@ describe('BackendService', () => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
 
+          expect(connection.request.url).toMatch(/\/lyrics\/99/);
+          expect(connection.request.method).toBe(RequestMethod.Get);
+
           connection.mockError(
             new MockError(
               new ResponseOptions({
@@ -140,7 +148,7 @@ describe('BackendService', () => {
             ));
         });
 
-      backendService.getItemById(99).subscribe(
+      backendService.getItemById('lyrics', 99).subscribe(
         (succesResult) => {
           expect(succesResult).toBeUndefined();
         },
@@ -158,6 +166,7 @@ describe('BackendService', () => {
 
           expect(connection.request.url).toMatch(/\/setlists/);
           expect(connection.request.method).toBe(RequestMethod.Post);
+
           connection.mockRespond(new Response(new ResponseOptions({status: 201})));
         });
 
@@ -174,6 +183,9 @@ describe('BackendService', () => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
 
+          expect(connection.request.url).toMatch(/\/setlists/)
+          expect(connection.request.method).toBe(RequestMethod.Post);
+
           connection.mockError(
             new MockError(
               new ResponseOptions({
@@ -184,7 +196,7 @@ describe('BackendService', () => {
             ));
         });
 
-      backendService.addItem(42).subscribe(
+      backendService.addItem('setlists', 42).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
@@ -218,6 +230,9 @@ describe('BackendService', () => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
 
+          expect(connection.request.url).toMatch(/\/songs\/23/);
+          expect(connection.request.method).toBe(RequestMethod.Put);
+
           connection.mockError(
             new MockError(
               new ResponseOptions({
@@ -228,7 +243,7 @@ describe('BackendService', () => {
             ));
         });
 
-      backendService.updateItemById(23).subscribe(
+      backendService.updateItemById('songs', 23).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },
@@ -243,10 +258,13 @@ describe('BackendService', () => {
     async(inject([BackendService], (backendService) => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
+
+          expect(connection.request.url).toMatch(/\/songs/);
           expect(connection.request.method).toBe(RequestMethod.Delete);
+
         });
 
-      backendService.deleteItemById(23).subscribe(
+      backendService.deleteItemById('songs', 23).subscribe(
         (successResult) => {
           expect(successResult).toBeDefined();
           // expect(successResult.status).toBe(204);
@@ -258,6 +276,9 @@ describe('BackendService', () => {
       mockBackend.connections.subscribe(
         (connection: MockConnection) => {
 
+          expect(connection.request.url).toMatch(/\/songs\/42/);
+          expect(connection.request.method).toBe(RequestMethod.Delete);
+
           connection.mockError(
             new MockError(
               new ResponseOptions({
@@ -268,7 +289,7 @@ describe('BackendService', () => {
             ));
         });
 
-      backendService.deleteItemById(42).subscribe(
+      backendService.deleteItemById('songs', 42).subscribe(
         (successResult) => {
           expect(successResult).toBeUndefined()
         },

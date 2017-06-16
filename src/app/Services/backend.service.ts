@@ -17,9 +17,9 @@ export class BackendService {
   constructor(private http: Http) { }
 
   // Get all items
-  getItems(sls: string): Observable<any[]> {
+  getItems(ressource: string): Observable<any[]> {
     // Get request
-    return this.http.get(`${this.baseUrl}/${sls}`, this.getHeader())
+    return this.http.get(`${this.baseUrl}/${ressource}`, this.getHeader())
     // and calling .json() on the response to return data
       .map((res: Response) => res.json())
       // catch error
@@ -27,33 +27,33 @@ export class BackendService {
   }
 
   // Add a new item
-  addItem(sls: string, body: Object): Observable<any[]> {
+  addItem(ressource: string, body: Object): Observable<any[]> {
 
-    return this.http.post(`${this.baseUrl}/${sls}`, body, this.getHeader())
+    return this.http.post(`${this.baseUrl}/${ressource}`, body, this.getHeader())
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'add new item server error'));
   }
 
   // Get item by ID
-  getItemById(sls: string, id: number): Observable<any[]> {
+  getItemById(ressource: string, id: number): Observable<any[]> {
 
-    return this.http.get(`${this.baseUrl}/${sls}/${id}`, this.getHeader())
+    return this.http.get(`${this.baseUrl}/${ressource}/${id}`, this.getHeader())
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'get item by id server error'));
   }
 
   // Update item by ID
-  updateItemById(sls: string, id: number, body: Object): Observable<any[]> {
+  updateItemById(ressource: string, id: number, body: Object): Observable<any[]> {
 
-    return this.http.put(`${this.baseUrl}/${sls}/${id}`, body, this.getHeader())
+    return this.http.put(`${this.baseUrl}/${ressource}/${id}`, body, this.getHeader())
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'update item by id server error'));
   }
 
   // Delete item by ID
-  deleteItemById(sls: string, id: number): Observable<any[]> {
+  deleteItemById(ressource: string, id: number): Observable<any[]> {
 
-    return this.http.delete(`${this.baseUrl}/${sls}/${id}`, this.getHeader())
+    return this.http.delete(`${this.baseUrl}/${ressource}/${id}`, this.getHeader())
       .catch((error: any) => Observable.throw(error.json().error || 'delete item by id server error'));
   }
 
