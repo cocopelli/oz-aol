@@ -9,15 +9,17 @@
 
 # And One Lyrics
 
-This is a Angular4 project
+This is the forntend from AndOneOccursScheme
 
-## Development server
+## Install
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install`
+ 
+## Run the application
 
-## Code scaffolding
+Run `npm run start`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -31,6 +33,10 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 
 Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `npm run install`.
+
+## Running continuous integration
+
+Run `npm run ci` to execute the unit and the end-to-end tests
 
 ## Further help
 
